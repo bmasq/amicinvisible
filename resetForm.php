@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         include "checkExisting.php";
 
         $command = escapeshellcmd("python3 python/reset.py");
-        echo shell_exec($command);
+        shell_exec($command);
 
         // loga el reset
         $pLog = "logs/participants.log";
