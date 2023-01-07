@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&display=swap');
+
+h1, h2, select, input {
+  font-family: 'Mountains of Christmas', cursive;
+  font-size: 5em;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  div {
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    background-color: #ebebeb;
+    border: 5px solid #000000;
+    padding: 100px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    margin: 0 0 20px;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+    margin: 0 0 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  select {
+    width: fit-content;
+    text-align: center;
+    font-size: 3em; /* increase the font size */
+    height: 75px; /* increase the height */
+    padding: 5px; /* add some padding */
+  }
+  
+  input[type="submit"] {
+    margin: 20px 0 0;
+    font-size: 3em; /* increase the font size */
+    height: 75px; /* increase the height */
+    padding: 5px; /* add some padding */
+  }
+  
+  
+  /* PC 
+    select {
+    width: fit-content;
+    text-align: center;
+  }
+  
+  input[type="submit"] {
+    margin: 20px 0 0;
+  } */
+  
+  p {
+    color: blue;
+    font-size: 0.5em;
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+  }
+  
+  span {
+    font-size: 0.7em;
+  }
+  
+  /* @media only screen and (min-width: 900px) {
+    div {
+      width: fit-content;
+    }
+
+    p {
+      font-size: 0.8em;
+    }
+  } */
