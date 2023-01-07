@@ -1,5 +1,5 @@
 
-## Using HTTP basic authentication for reset.php
+### Using HTTP basic authentication for reset.php
 
 1. Create a `.htaccess` file in the root directory of your website, and add the following lines:
 
