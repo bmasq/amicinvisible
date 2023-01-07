@@ -1,8 +1,6 @@
 <?php
 
-/* De moment el nom d'aquest fitxer és reset<codi 6 dígits>.php
-per donar-li una mica més de seguretat (un poc de bromes)
-i qualsevol no el pugui executar */
+include "checkExisting.php";
 
 $command = escapeshellcmd("python3 python/reset.py");
 echo shell_exec($command);

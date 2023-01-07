@@ -50,6 +50,7 @@
     de tal manera que l'administrador pot resoldre problemes sense
     saber qui ha tocat a qui */
     function logInstance($player, $extraction) {
+        include "checkExisting.php";
         global $exitCode;
         $pLog = "logs/participants.log";
         $exLog = "logs/extractions.log";
