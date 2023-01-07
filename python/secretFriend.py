@@ -35,12 +35,16 @@ def poolToSet():
 def hatter(player):
     houses = participants()
     pool = poolToSet()
-    # conjunt de noms que s'han d'excloure
-    playerHouse = set()
-    for val in houses.values():
-        if player in val:
-            playerHouse = val
-    return list(pool - playerHouse)
+    if len(houses) > 1:
+        # conjunt de noms que s'han d'excloure
+        playerHouse = set()
+        for val in houses.values():
+            if player in val:
+                playerHouse = val
+        return list(pool - playerHouse)
+    # only removes the player if its a single group
+    else:
+        return list(pool - {player})
     
 # elimina el nom que hagi tocat dels disponibles per a la següent tirada
 def updatePool(name):
@@ -74,7 +78,6 @@ try:
     name = hat[randint(0, len(hat) - 1)]
 except:
     print("ERROR: some error while extracting name")
-    exit()
 
 updatePool(name)
 updateForbidden(player)

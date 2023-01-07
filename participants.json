@@ -1,67 +1,9 @@
 {
-	"papereria": [
-		"bernat papereria",
-		"antoni mas",
-		"francisca papereria"
-	],
-
-	"pere": [
-		"pere papereria"
-	],
-
-	"son negre": [
-		"jerònia",
-		"tià",
-		"jaume",
-		"bernat son negre"
-	],
-
-	"ses venes": [
-		"damià ses venes",
-		"maria del mar",
-		"alba",
-		"quim",
-		"bernat ses venes"
-	],
-
-	"sa cabaneta": [
-		"damià sa cabaneta",
-		"magdalena"
-	],
-
-	"bernat gerard": [
-		"bernat gerard"
-	],
-
-	"deulosal": [
-		"maria beneta",
-		"joan fuster"
-	],
-
-	"fusters": [
-		"damià fuster",
-		"maria antònia",
-		"maria q. canyellas"
-	],
-
 	"llubiners": [
 		"francisca llubí",
 		"llorenç",
 		"aina",
 		"andreu llubí",
 		"joan llubí"
-	],
-
-	"catalina": [
-		"catalina mas"
-	],
-
-	"tita": [
-		"tita"
-	],
-
-	"comellar": [
-		"maria es comellar",
-		"andreu es comellar"
 	]
 }
