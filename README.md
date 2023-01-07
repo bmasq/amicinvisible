@@ -1,3 +1,4 @@
+*here goes a description and the usual things in a README file (ETA: when the developer is inspired and not too lazy to write it)*
 
 ### Using HTTP basic authentication for reset.php
 
