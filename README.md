@@ -1,7 +1,6 @@
 *here goes a description and the usual things in a README file (ETA: when the developer is inspired and not too lazy to write it)*
 
-### *Notes mentals*
-- *Estaria bé moure tots els fitxers que no interaccionen amb l'usuari fora de l'arrel del serviodor web (eg logs dins /var/logs)*
+---
 
 ### Using HTTP basic authentication for reset.php
 
@@ -27,3 +26,9 @@
     To add additional users to the .htpasswd file, use the same command but omit the `-c` flag.
 
 3. When someone tries to access `reset.php`, they will be prompted to enter a username and password. If the username and password they enter match a valid user in the `.htpasswd` file, they will be granted access to the `reset.php` file.
+
+---
+
+### *Notes mentals*
+- *Estaria bé moure tots els fitxers que no interaccionen amb l'usuari fora de l'arrel del serviodor web (eg logs dins /var/logs)*
+- Seperar codi php de l'html?
