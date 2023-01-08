@@ -7,6 +7,7 @@
     <script src="script.js"></script>
 </head>
 <body>
+    <?php include "checkExisting.php"; ?>
     <div>
     <h1>AMIC INVISIBLE</h1>
     <h2>Digues qui ets<br>i et trauré el teu amic invisible</h2>
