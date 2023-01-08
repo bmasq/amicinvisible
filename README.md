@@ -1,5 +1,7 @@
 *here goes a description and the usual things in a README file (ETA: when the developer is inspired and not too lazy to write it)*
 
+*Nota mental: estaria bé moure tots els fitxers que no interaccionen amb l'usuari fora de l'arrel del serviodor web*
+
 ### Using HTTP basic authentication for reset.php
 
 1. Create a `.htaccess` file in the root directory of your website, and add the following lines:
