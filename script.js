@@ -24,4 +24,22 @@ window.onload = function() {
       return str;
     }
   }
-  
+
+  // Confirmation dialog and empty submit forbidden
+  function confirmSubmit() {
+    if (checkPlayer()) {
+        const player = document.getElementById('player').value;
+        return confirm(`Estàs segur que ets aquesta persona: "${player}"? No es pot tornar enrere
+        (sense donar mal de caps a en Bernat de sa Papereria)`);
+    }
+    return false;
+  }
+
+  function checkPlayer() {
+      const player = document.getElementById('player').value;
+      if (player === "") {
+          alert('Has de seleccionar un nom');
+          return false;
+      }
+      return true;
+  }
