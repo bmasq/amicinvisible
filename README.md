@@ -1,6 +1,7 @@
 *here goes a description and the usual things in a README file (ETA: when the developer is inspired and not too lazy to write it)*
 
-*Nota mental: estaria bé moure tots els fitxers que no interaccionen amb l'usuari fora de l'arrel del serviodor web (eg logs dins /var/logs)*
+### *Notes mentals*
+- *Estaria bé moure tots els fitxers que no interaccionen amb l'usuari fora de l'arrel del serviodor web (eg logs dins /var/logs)*
 
 ### Using HTTP basic authentication for reset.php
 
