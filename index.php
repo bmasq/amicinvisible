@@ -7,6 +7,7 @@
     <script src="script.js"></script>
 </head>
 <body>
+    <!-- Initializes forbidden and pool if first time -->
     <?php include "checkExisting.php"; ?>
     <div>
     <h1>AMIC INVISIBLE</h1>
@@ -15,6 +16,7 @@
             <select name="player" id="player">
                 <option value="" disabled selected>-- QUI ETS? --</option>
                 <?php
+                # builds optgroups and options from the json file
                 $command = escapeshellcmd("python3 python/optgroups.py");
                 echo shell_exec($command);
                 ?>

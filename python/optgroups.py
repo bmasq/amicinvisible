@@ -1,5 +1,20 @@
 from jsonToDict import participants
 
+"""
+Uses the dictionary of houses/names to create the contents
+of an HTML select element.
+
+If the dictionary contains multiple houses, an optgroup is
+created for each house and the options inside it are the list of names.
+
+If it is a single-group dictionary, the optgroup is omitted
+and the options are the names in the group.
+
+This not only automates the process of creating the dropdown menu,
+it also ensures that the submitted values are always correct.
+
+"""
+
 optgroup = "<optgroup label='{}'>"
 option = "<option value='{}'>{}</option>"
 out = ""

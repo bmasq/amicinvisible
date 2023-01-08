@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&display=swap');
 
+/* 99% writthen by  chat.openai.com */
+
 h1, h2, select, input {
   font-family: 'Mountains of Christmas', cursive;
   font-size: 5em;
@@ -56,17 +58,6 @@ body {
     padding: 5px; /* add some padding */
   }
   
-  
-  /* PC 
-    select {
-    width: fit-content;
-    text-align: center;
-  }
-  
-  input[type="submit"] {
-    margin: 20px 0 0;
-  } */
-  
   p {
     color: blue;
     font-size: 0.5em;
@@ -78,13 +69,3 @@ body {
   span {
     font-size: 0.7em;
   }
-  
-  /* @media only screen and (min-width: 900px) {
-    div {
-      width: fit-content;
-    }
-
-    p {
-      font-size: 0.8em;
-    }
-  } */

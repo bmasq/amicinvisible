@@ -1,6 +1,7 @@
 from jsonToDict import participants
 
-# crea un pool des de zero amb tots els participants
+# Initializes the pool file with all the
+# participants in the json file
 def fillPool(houses):
     try:
         with open("pool", "w") as pool:
@@ -13,5 +14,5 @@ def fillPool(houses):
 # main
 fillPool(participants())
 
-# esborra la llista de gent que ja ha participat
+# empties the list of people who had already participated
 with open("forbidden", "w") as f: f.write("")

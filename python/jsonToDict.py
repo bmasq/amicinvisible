@@ -2,10 +2,10 @@ import json
 
 def participants():
     try:
-        #diccionari amb "casa":"llista noms"
+        # dictionary with "house":"name list"
         with open("participants.json", "r") as f:
             houses = json.load(f)
-        #converteix les llistes en conjunts
+        # converts lists to sets
         for key, lis in houses.items():
             houses[key] = set(lis)
     except FileNotFoundError:

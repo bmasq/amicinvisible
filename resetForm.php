@@ -1,10 +1,13 @@
 <?php
 
-/* Fa servir un formulari on s'ha d'introduir un PIN o
-contrasenya per tal que s'executi. Només acceptarà
-caràcters alfanumèrics
+/* 
+It uses a form where a PIN or password must be introduced,
+in order to be executed.
 
-!!! MOLT INSEGUR (HTTP) !!! */
+Only accepts alphanumeric characters.
+
+WARNING: Fairly INSECURE (post over HTTP).
+*/
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pass = 880870;
@@ -15,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $command = escapeshellcmd("python3 python/reset.py");
         shell_exec($command);
 
-        // loga el reset
+        // logs the reset
         $pLog = "logs/participants.log";
         $exLog = "logs/extractions.log";
         $date = date("y-m-d H:i:s T  ");

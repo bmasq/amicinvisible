@@ -2,12 +2,22 @@ import sys
 from jsonToDict import participants
 from random import randint
 
-# NOTA: és aquest script el que fa la conversió a
-# majúscules abans de tornar el nom perquè amb PHP
-# era molt complexa la gestió de la codificació UTF-8
+""" 
+The main script that takes the current participant and selects
+their friend from a "hat" full of names of the other still-not-chosen
+participants.
 
-# comprova si el jugador ja ha participat i, si és així,
-# tornarà l'error al codi PHP
+The 'hat' will not contain the player in question, nor the
+people from their group (aka house).
+
+NOTE: this script capitalizes the output before returning it
+to the PHP code because handling UTF-8 encoding with PHP
+was much more complex.
+
+ """
+
+# checks whether the player has already participated,
+# in which case returns an error to the PHP code
 def forbidden(name):
     try:
         with open("forbidden", "r") as f:
@@ -19,7 +29,7 @@ def forbidden(name):
         print("ERROR: 'forbidden' file not found")
         exit()
 
-# torna un conjunt amb els noms del pool
+# returns a set with the names in the pool
 def poolToSet():
     pool = set()
     try:
@@ -30,13 +40,13 @@ def poolToSet():
         print("Error: 'pool' file not found")
     return pool
 
-# torna un "capell" d'on agafar el nom:
-# una llista amb els noms que té permès agafar el participant
+# returns a "hat" from which to take the name:
+# aka a list with the names the participant is allowed to take
 def hatter(player):
     houses = participants()
     pool = poolToSet()
     if len(houses) > 1:
-        # conjunt de noms que s'han d'excloure
+        # sef of names to exclude
         playerHouse = set()
         for val in houses.values():
             if player in val:
@@ -46,21 +56,22 @@ def hatter(player):
     else:
         return list(pool - {player})
     
-# elimina el nom que hagi tocat dels disponibles per a la següent tirada
+# removes the extracted name form the list of available
+# people for the following extraction
 def updatePool(name):
     with open("pool", "r+") as f:
-        # llista amb cada una de les línies(=noms)
+        # list with every line (aka names)
         lines = f.read().splitlines()
         lines.remove(name)
-        # torna al principi del fitxer per escriure
+        # returns to the start of the file to write
         f.seek(0)
         f.write('\n'.join(lines))
-        # esborra tot el contingut després del punter
-        # (fins allà on s'ha escrit)
+        # deletes all content after the pointer
+        # (aka up to where it has written)
         f.truncate()
 
-# afegeix el darrer participiant a la llista
-# per tal que no pugui tornar a fer-ho
+# adds the last participant in the list
+# so they cannot participate again
 def updateForbidden(name):
     with open("forbidden", "a") as f:
         f.write(name + '\n')
@@ -70,8 +81,8 @@ def updateForbidden(name):
 player = sys.argv[1]
 forbidden(player) # s'atura si ja ha participat
 
-# "capell" d'on el participant extraurà el seu amic invisible que
-# no serà ni ell mateix ni un membre de la seva unitat familiar
+# "hat" from which the participant is extracting their friend,
+# who will not be themself nor a member of their house
 hat = hatter(player)
 
 try:

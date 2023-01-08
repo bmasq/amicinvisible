@@ -1,3 +1,5 @@
+// 99.99999% written by chat.openai.com
+
 window.onload = function() {
     // Generate random colors
     const bgColor = '#' + pad(Math.floor(Math.random()*56 + 200).toString(16)) + pad(Math.floor(Math.random()*56 + 200).toString(16)) + pad(Math.floor(Math.random()*56 + 200).toString(16));
