@@ -11,7 +11,7 @@
     <?php include "checkExisting.php"; ?>
     <div>
     <h1>AMIC INVISIBLE</h1>
-    <h2>Digues qui ets<br>i et trauré el teu amic invisible</h2>
+    <h2>Digues qui ets<br>i et trauré el teu amic</h2>
         <form action="secretFriend.php" method="get" onsubmit="return confirmSubmit();">
             <select name="player" id="player">
                 <option value="" disabled selected>-- QUI ETS? --</option>
